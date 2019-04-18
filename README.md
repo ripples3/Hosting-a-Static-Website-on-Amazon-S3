@@ -10,7 +10,6 @@ We can also maximize Amazon's "Free Tier" for this project.
 ### What is a Static Website?
 A static website contains Web pages with fixed content. Each page is coded in HTML and displays the same information to every visitor. Static sites are the most basic type of website and are the easiest to create. Unlike dynamic websites, they do not require any Web programming or database design. A static site can be built by simply creating a few HTML pages and publishing them to a Web server.
 
-
 ### What Is Amazon S3 (Simple Storage Service)?
 Amazon Simple Storage Service is storage for the Internet. It is designed to make web-scale computing easier for developers.
 
@@ -20,9 +19,22 @@ Amazon S3 has a simple web services interface that you can use to store and retr
 Explore more than 60 products (including Amazon S3) and start building on AWS using the free tier. Three different types of free offers are available depending on the product used. See below for details on each product.
 For more info: https://aws.amazon.com/free/
 
+### Static Website using Amazon S3 Architecture
+Today we will focus on routing internet traffic to the Amazon S3 bucket. Please ignore the CloudFront in the image below. We will perfom that someday.
+![AWS_StaticWebsiteHosting_Architecture](https://github.com/ripples3/Static-Website-using-Amazon-S3/blob/master/AWS_StaticWebsiteHosting_Architecture.png)
 
+### 1. Naming Your S3 Bucket
+It is very important that your bucket has the same name as you domain name.
+For example, your website domain is "example.com", then your S3 bucket name should be "example.com".
 
-
-
+### 2. Configuring Your S3 Bucket for Static Website Hosting
+Does your bucket and website has the same domain name? If yes, Let proceed the onto the next steep.
+Follow steps below to turn on static website hosting for you S3
+- Navigate to S3 in the AWS Console
+- Click into your bucket
+- Click the “Properties” section
+- Click the “Static website hosting” option
+- Select “Use this bucket to host a website”
+- Enter “index.html” as the Index document
 
 
