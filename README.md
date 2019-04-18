@@ -18,11 +18,10 @@ Amazon S3 has a simple web services interface that you can use to store and retr
 
 ### Free Tier 
 Explore more than 60 products (including Amazon S3) and start building on AWS using the free tier. Three different types of free offers are available depending on the product used. See below for details on each product.
-Fore more info: https://aws.amazon.com/free/
+For more info: https://aws.amazon.com/free/
 
 
-### Static Website using Amazon S3 Architecture
-![Learning Curves](https://raw.githubusercontent.com/uber/ludwig/master/docs/images/getting_started_learning_curves.png "Learning Curves")
+
 
 
 
