@@ -89,7 +89,7 @@ In the navigation pane, choose ##### Hosted Zones.
 
 Choose the name of the hosted zone that has the domain name that you want to use to route traffic to your S3 bucket.
 
-Choose ##### Create Record Set.
+Choose **Create Record Set**
 
 Specify the following values:
 
@@ -150,6 +150,6 @@ in the <emphasis>Amazon Route 53 Developer Guide</emphasis>.</p>
 
 Follow the on-screen prompts to select **index.html**, and then choose **Start Upload**.
 
-###5. Validate That It Worked
+### 5. Validate That It Worked
 Your static website has been uploaded to your S3 website bucket. You can go to [example.com] and your static website loads from your S3 bucket.
 
