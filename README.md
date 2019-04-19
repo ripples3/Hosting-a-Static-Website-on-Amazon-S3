@@ -81,7 +81,7 @@ We are almost done!!! Now that your S3 bucket is accessible anywhere around the 
 
 In order for a user to load your S3 website you’ll need to provide mapping from your domain name example.com, to your S3 website url example.com.s3-website-us-east-1.amazonaws.com. This mapping is often referred to as a CNAME record inside of your Domain Name Servers (DNS) records.
 
-###### To route traffic to an S3 bucket
+#### To route traffic to an S3 bucket
 
 Sign in to the AWS Management Console and open the Route 53 console at https://console.aws.amazon.com/route53/.
 
@@ -99,10 +99,10 @@ Enter the domain name that you want to use to route traffic to your S3 bucket. T
 For example, if the name of the hosted zone is example.com and you want to use acme.example.com to route traffic to your bucket, enter acme.
 
 #### Type
-Choose **A – IPv4 address**.
+⋅⋅⋅Choose **A – IPv4 address**.
 
 #### Alias
-Choose **Yes**.
+⋅⋅⋅Choose **Yes**.
 
 Alias Target
 In the S3 website endpoints section of the list, choose the bucket that has the same name that you specified for **Name**.
