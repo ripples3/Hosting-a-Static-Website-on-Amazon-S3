@@ -81,41 +81,75 @@ We are almost done!!! Now that your S3 bucket is accessible anywhere around the 
 
 In order for a user to load your S3 website you’ll need to provide mapping from your domain name example.com, to your S3 website url example.com.s3-website-us-east-1.amazonaws.com. This mapping is often referred to as a CNAME record inside of your Domain Name Servers (DNS) records.
 
-To route traffic to an S3 bucket
+###### To route traffic to an S3 bucket
 
 Sign in to the AWS Management Console and open the Route 53 console at https://console.aws.amazon.com/route53/.
 
-In the navigation pane, choose Hosted Zones.
+In the navigation pane, choose ##### Hosted Zones.
 
 Choose the name of the hosted zone that has the domain name that you want to use to route traffic to your S3 bucket.
 
-Choose Create Record Set.
+Choose ##### Create Record Set.
 
 Specify the following values:
 
-Name
+#### Name
 Enter the domain name that you want to use to route traffic to your S3 bucket. The default value is the name of the hosted zone.
 
 For example, if the name of the hosted zone is example.com and you want to use acme.example.com to route traffic to your bucket, enter acme.
 
-Type
-Choose A – IPv4 address.
+#### Type
+Choose **A – IPv4 address**.
 
-Alias
-Choose Yes.
+#### Alias
+Choose **Yes**.
 
 Alias Target
-In the S3 website endpoints section of the list, choose the bucket that has the same name that you specified for Name.
+In the S3 website endpoints section of the list, choose the bucket that has the same name that you specified for **Name**.
 
-Routing Policy
+#### Routing Policy
 Choose the applicable routing policy. For more information, see Choosing a Routing Policy.
 
-Evaluate Target Health
-Accept the default value of No.
+#### Evaluate Target Health
+Accept the default value of **No**.
 
-Choose Create.
+Choose **Create**.
 
+Changes generally propagate to all Route 53 servers within 60 seconds. When propagation is done, you'll be able to route traffic to your S3 bucket by using the name of the alias record that you created in this procedure.
+
+### 4. Uploading Static Website
+You can create the first page for your website and upload it to (save it in) your bucket.
+
+1. Copy the following text and paste it into a text editor:
+```
+<html>
+<head>
+<title>Amazon Route 53 Getting Started</title>	
+</head>
+
+<body>
+
+<h1>Routing Internet Traffic to an Amazon S3 Bucket for Your Website</h1>
+
+<p>For more information, see 
+<a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/getting-started.html">Getting Started with Amazon Route 53</a> 
+in the <emphasis>Amazon Route 53 Developer Guide</emphasis>.</p>
+
+</body>
+
+</html>
+```
+
+2. Save the file with the file name **index.html**.
+
+3. In the Amazon S3 console, choose the name of the bucket that you just created.
+
+4. Choose **Upload**.
+
+5. Choose **Add files**.
+
+Follow the on-screen prompts to select **index.html**, and then choose **Start Upload**.
 
 ###5. Validate That It Worked
-Your static website has been uploaded to your S3 website bucket. You can go to www.my-awesome-site.com and your static website loads from your S3 bucket.
+Your static website has been uploaded to your S3 website bucket. You can go to [example.com] and your static website loads from your S3 bucket.
 
